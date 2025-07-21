@@ -22,7 +22,7 @@ html, body {
   width: 110vw;
   height: 108px;
   background: #bdf6e9;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,4 +51,4 @@ html, body {
   height: 60px;
   width: auto;
   display: block;
-}
+}/*# sourceMappingURL=style.css.map */

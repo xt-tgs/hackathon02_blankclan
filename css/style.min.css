@@ -1,0 +1,2 @@
+.header{width:100vw;min-height:120px;background:linear-gradient(100deg, #e1f7bb 0%, #19c4cf 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.bar{background:#bdf6e9;min-width:70vw;width:80vw;max-width:1100px;min-height:90px;border-radius:.5em;box-shadow:0 4px 16px rgba(0,0,0,.1);display:flex;align-items:center;justify-content:center;transform:skew(-2deg, -2deg);position:relative;z-index:1}.logo{height:60px;width:auto;display:block}
+/*# sourceMappingURL=style.min.css.map */
