@@ -1,0 +1,54 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100vw;
+  height: 180px;
+  background: linear-gradient(100deg, #e1f7bb 0%, #19c4cf 100%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bar {
+  position: absolute;
+  top: 36px;
+  left: -5vw;
+  width: 110vw;
+  height: 108px;
+  background: #bdf6e9;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: skew(-2deg, -2deg);
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.logo-set {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transform: skew(2deg, 2deg);
+}
+
+.logo-icon {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.logo-text {
+  height: 60px;
+  width: auto;
+  display: block;
+}

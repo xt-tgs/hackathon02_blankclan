@@ -1,0 +1,442 @@
+@charset "UTF-8";
+body {
+  font-family: "Noto Sans", sans-serif;
+  line-height: 1.75;
+  background-color: var(--background);
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --main: #3EA399;
+  --sub: #9EE9D7;
+  --red: #E66144;
+  --black: #333937;
+  --white: #fff;
+  --background: #F7F8EC;
+}
+
+/* 部品
+------------------------------------------ */
+.font {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.font-leaf {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.font-gothic {
+  font-family: "Yu Gothic", "YuGothic", sans-serif;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px 0 100px;
+}
+
+main {
+  min-height: 500px;
+}
+
+h2 {
+  font-size: 55px;
+  text-align: center;
+  font-family: "Yu Gothic", "YuGothic", sans-serif;
+  color: #3EA399;
+  padding-bottom: 20px;
+}
+
+.red {
+  color: var(--red);
+}
+
+.green {
+  color: var(--main);
+}
+
+.logo-img {
+  width: 40px;
+}
+
+/* ボタン
+------------------------------------------ */
+.button {
+  display: block;
+  background-color: var(--sub);
+  border: 2px solid var(--white);
+  border-radius: 40px;
+  font-size: 20px;
+  /* ボタンの影 */
+  box-shadow: 1px 4px rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  color: var(--black);
+  max-width: 300px;
+  padding: 15px;
+}
+
+/* menu
+------------------------------------------ */
+.menu {
+  position: relative;
+  overflow: clip;
+}
+
+.menu-nav {
+  display: grid;
+  gap: 3px;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  translate: 0 -50%;
+  background-color: var(--white);
+  border-top: 1px solid #3EA399;
+  border-right: 1px solid #3EA399;
+  border-bottom: 1px solid #3EA399;
+  border-radius: 0 1.4375rem 1.4375rem 0;
+  padding: 10px 15px;
+  z-index: 1000;
+}
+.menu-nav li a {
+  display: inline-block;
+  writing-mode: vertical-rl;
+  padding: 12px 15px;
+  background-color: var(--main);
+  color: var(--white);
+  border-radius: 100vmax;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: bold;
+  letter-spacing: 0.5em;
+  min-height: 6.9375rem;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* 下層ページの背景
+------------------------------------------ */
+.lower-bg {
+  display: block;
+  max-width: 850px;
+  width: 50%;
+  height: auto;
+  padding-top: 80px;
+  position: absolute;
+  bottom: 0px;
+  right: -225px;
+  -webkit-animation: 20s linear infinite rotation;
+          animation: 20s linear infinite rotation;
+  z-index: -100;
+  opacity: 0.3;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100vw;
+  height: 180px;
+  background: linear-gradient(100deg, #e1f7bb 0%, #19c4cf 100%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bar {
+  position: absolute;
+  top: 36px;
+  left: -5vw;
+  width: 110vw;
+  height: 108px;
+  background: #bdf6e9;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: skew(-2deg, -2deg);
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.logo-set {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transform: skew(2deg, 2deg);
+}
+
+.logo-icon {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.logo-text {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.footer {
+  background: #d9f0f0;
+  text-align: center;
+  padding: 56px 0 24px;
+  width: 100%;
+}
+.footer .footer-logo {
+  display: inline-block;
+  margin-bottom: 32px;
+}
+.footer .footer-logo img {
+  width: 72px;
+  height: 72px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+}
+.footer .footer-logo img:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+.footer .footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 96px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+.footer .footer-nav a {
+  color: #333;
+  font-weight: bold;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer .footer-nav a:hover {
+  color: #19c4cf;
+}
+.footer .footer-line {
+  margin: 0 auto 20px;
+  width: 80%;
+  border: none;
+  border-top: 1px solid #8caaa6;
+  opacity: 0.6;
+}
+.footer .footer-copy {
+  color: #484848;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+.avatar {
+  background-color: var(--white);
+  -webkit-clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 83%, 50% 92%, 0 83%);
+          clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 83%, 50% 92%, 0 83%);
+  padding-top: 200px;
+  margin: 0 auto;
+  height: 1238px;
+}
+.avatar-text {
+  font-size: 20px;
+  text-align: center;
+}
+
+.slider {
+  /*横幅94%で左右に余白を持たせて中央寄せ*/
+  width: 94%;
+  margin: 0 auto;
+  display: flex;
+}
+.slider img {
+  width: 28vw;
+  /*スライダー内の画像を60vwにしてレスポンシブ化*/
+  height: auto;
+}
+@media (max-width: 950px) {
+  .slider img {
+    width: 60vw;
+  }
+}
+.slider .slick-slide {
+  transform: scale(0.8);
+  /*左右の画像のサイズを80%に*/
+  transition: all 0.5s;
+  /*拡大や透過のアニメーションを0.5秒で行う*/
+  opacity: 0.5;
+  /*透過50%*/
+}
+@media (max-width: 950px) {
+  .slider .slick-slide {
+    transform: scale(0.5);
+    opacity: 0.1;
+  }
+}
+.slider .slick-slide .slick-center {
+  transform: scale(1);
+  /*中央の画像のサイズだけ等倍に*/
+  opacity: 1;
+  /*透過なし*/
+}
+@media (max-width: 950px) {
+  .slider .slick-slide .slick-center {
+    transform: scale(1.6);
+  }
+}
+
+/* question
+------------------------------------------ */
+.question {
+  background: url(../img/question.png);
+  max-width: 100vw;
+  height: 320px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+          clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+  padding-top: 55px;
+}
+.question-box {
+  margin: 0 auto;
+  text-align: center;
+  width: 680px;
+  padding-left: 50px;
+}
+.question h2 {
+  font-size: 32px;
+}
+.question p {
+  font-size: 18px;
+  text-align: left;
+}
+
+/* friends
+------------------------------------------ */
+.friends {
+  padding: 0 50px 50px;
+}
+.friends-box {
+  position: relative;
+  margin-bottom: 75px;
+}
+.friends-box h3 {
+  color: var(--main);
+  font-size: 98px;
+  position: absolute;
+  writing-mode: vertical-rl;
+}
+.friends-odd {
+  padding-right: 180px;
+}
+.friends-heading-odd {
+  top: 0;
+  left: 0%;
+  letter-spacing: 30px;
+}
+.friends-heading-even {
+  top: 0%;
+  right: 0%;
+  letter-spacing: 30px;
+}
+.friends-item {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 70px;
+  margin-right: 75px;
+}
+.friends-item-img {
+  position: relative;
+}
+.friends-item-img .odd {
+  padding-right: 80px;
+}
+.friends-text {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 100px;
+  font-size: 16px;
+  height: 200px;
+  padding: 15px 10px 5px 55px;
+  width: 490px;
+  line-height: 2;
+  letter-spacing: 7px;
+}
+.friends-text-even {
+  font-size: 22px;
+  background-color: rgba(198, 240, 230, 0.7);
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 100;
+  white-space: nowrap;
+  top: 65%;
+  left: 10%;
+  transform: rotate(-8deg);
+}
+.friends-text-odd {
+  font-size: 24px;
+  background-color: rgba(198, 240, 230, 0.8);
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 100;
+  white-space: nowrap;
+  bottom: 3%;
+  right: 16%;
+  transform: rotate(8deg);
+}
+.friends-img {
+  width: 300px;
+  border-radius: 170px;
+}
+.friends-img-bg {
+  width: 470px;
+  border-radius: 170px;
+}
+/*# sourceMappingURL=style.css.map */
