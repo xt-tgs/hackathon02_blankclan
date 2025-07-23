@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @charset "UTF-8";
 body {
   font-family: "Noto Sans", sans-serif;
@@ -170,6 +171,8 @@ h2 {
     transform: rotate(360deg);
   }
 }
+=======
+>>>>>>> 38dca506bf3790602fc739962f5a70618672aa26
 html, body {
   margin: 0;
   padding: 0;
@@ -277,6 +280,7 @@ html, body {
   color: #484848;
   font-size: 0.8rem;
   letter-spacing: 0.02em;
+<<<<<<< HEAD
 }
 
 .avatar {
@@ -440,3 +444,6 @@ html, body {
   border-radius: 170px;
 }
 /*# sourceMappingURL=style.css.map */
+=======
+}/*# sourceMappingURL=style.css.map */
+>>>>>>> 38dca506bf3790602fc739962f5a70618672aa26
