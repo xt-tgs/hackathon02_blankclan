@@ -1,3 +1,16 @@
-@import 'layout/header';
+// common
+@use'common/mixin' as m;
+@use'common/common';
 
-@import 'layout/footer';
+// layouts
+@use'layout/header';
+@use'layout/footer';
+
+// pages
+@use'pages/avatar';
+@use'pages/floorMap';
+@use'pages/friends';
+@use'pages/loading';
+@use'pages/worries';
+@use'pages/method';
+
