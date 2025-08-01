@@ -7,9 +7,11 @@
 @use'layout/footer';
 
 // pages
-@use'pages/avatar';
-@use'pages/floorMap';
-@use'pages/friends';
-@use'pages/loading';
+@use'pages/mainvisual';
 @use'pages/worries';
+@use'pages/friends';
+@use'pages/avatar';
 @use'pages/method';
+@use'pages/floorMap';
+@use'pages/loading';
+@use'pages/mainvisual__opening-video';
