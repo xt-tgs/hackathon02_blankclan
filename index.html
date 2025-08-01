@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MetaLeaf</title>
+  <meta name="description" content="MetaLeafでつながる。エンジニア仲間、学習中の方など様々な方が参加しています。">
+  <!-- フォント類 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DotGothic16&family=Noto+Sans+JP:wght@100..900&display=swap"
+    rel="stylesheet">
+  <!-- リセットCSS -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <!-- メインCSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Slick CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <!-- ファビコン -->
+  <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+
+<body>
+  <!-- オープニング動画レイヤー -->
+  <div id="opening-video-layer">
+    <video id="opening-video" autoplay muted playsinline>
+      <source src="/mov/main06_15sVer.mp4" type="video/mp4" />
+      このブラウザは動画に対応していません。
+    </video>
+  </div>
+
+  <!-- ヘッダーレイヤー -->
+  <header class="header">
+    <div class="bar">
+      <a href="/" class="logo-set">
+        <img src="img/logo01.png" alt="MetaLeafロゴ" class="logo-icon" />
+        <img src="img/text_MataLeaf.png" alt="MetaLeafテキストロゴ" class="logo-text" />
+      </a><!-- ハンバーガー -->
+        <button class="hamburger" aria-label="メニューを開く" aria-controls="sp-menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <!-- スマホ用メニュー -->
+      <nav class="sp-menu" id="sp-menu" aria-hidden="true">
+        <ul>
+          <li><a href="index.html#question">MetaLeafについて</a></li>
+          <li><a href="index.html#avatar">アバター</a></li>
+        <li><a href="index.html#method">操作方法</a></li>
+        <li><a href="index.html#floormap">フロアマップ</a></li>
+        <!-- 下層用なら、hrefをそのページのidやリンクに変えてOK -->
+        </ul>
+      </nav>
+  </header>
+
+  <main>
+    <!-- メインビジュアルレイヤー -->
+    <div class="mainvisual-wrapper" id="top-page">
+      <div class="mainvisual">
+        <div class="mainvisual__logo-area">
+          <a href="/">
+            <img src="img/logo01.png" alt="MetaLeafロゴ" class="mainvisual__logo" />
+          </a>
+        </div>
+        <hr class="mainvisual__line" />
+        <div class="mainvisual__catch font">私たちをつなぐ場所</div>
+        <div class="mainvisual__visual-area">
+          <img src="/img/transparent/akita_transparent.png" alt="ランドマーク01"
+            class="mainvisual__landmark mainvisual__landmark--topleft" />
+          <img src="/img/transparent/aichi_transparent.png" alt="ランドマーク02"
+            class="mainvisual__landmark mainvisual__landmark--topright" />
+          <img src="/img/transparent/aomori_transparent.png" alt="ランドマーク03"
+            class="mainvisual__landmark mainvisual__landmark--middleleft" />
+          <img src="/img/transparent/australia_transparent.png" alt="ランドマーク04"
+            class="mainvisual__landmark mainvisual__landmark--middleright" />
+          <img src="/img/transparent/chiba_transparent.png" alt="ランドマーク05"
+            class="mainvisual__landmark mainvisual__landmark--bottomleft" />
+          <img src="/img/transparent/ehime_transparent.png" alt="ランドマーク06"
+            class="mainvisual__landmark mainvisual__landmark--bottomright" />
+
+          <div class="mainvisual__earth-group">
+            <img src="img/earth_transparent.png" alt="地球" class="mainvisual__earth" />
+            <!-- GIFハム（地球の上に配置） -->
+            <img src="mov/white-ham_dance.gif" alt="ホワイトハム" class="mainvisual__hamgif mainvisual__hamgif--white">
+            <img src="mov/gray-ham_dance.gif" alt="グレーハム" class="mainvisual__hamgif mainvisual__hamgif--gray">
+            <img src="mov/pink-ham_dance.gif" alt="ピンクハム" class="mainvisual__hamgif mainvisual__hamgif--pink">
+            <img src="img/text_MataLeaf.png" alt="MetaLeafテキストロゴ" class="mainvisual__metaleaf" />
+          </div>
+        </div>
+        <div class="mainvisual__subtitle font">expanding connections ...</div>
+      </div>
+    </div>
+
+    <button class="button page-top"><i class="bi bi-arrow-up-short"></i>
+      <p>PAGE TOP</p>
+      <!-- <span class="ear"></span>
+      <span class="ear"></span>
+      <span class="eye"></span>
+      <span class="eye"></span>
+      <span class="mouth"></span>
+      <span class="color"></span> -->
+    </button>
+
+    <section class="menu">
+      <ul class="menu-nav">
+        <li><a href="#question"><span class="font-leaf">MetaLeaf</span>について</a></li>
+        <li><a href="#avatar">アバター</a></li>
+        <li><a href="#method">操作方法</a></li>
+        <li><a href="#floormap">フロアマップ</a></li>
+      </ul>
+    </section>
+
+    <section class="worries" id="worries">
+      <div class="worries-box">
+        <div class="bubble font-gothic">仲間がほしい</div>
+        <div class="bubble font-gothic">情報交換したい</div>
+        <div class="bubble font-gothic">今日はやる気が出ない</div>
+        <div class="bubble font-gothic">集中力が続かない</div>
+        <div class="bubble font-gothic">話がしたい</div>
+        <div class="bubble font-gothic">わからないことがあって躓いている</div>
+      </div>
+      <div class="thinker">
+        <img src="img/worries.png" alt="頭を抱える人">
+      </div>
+      <div class="adventure-banner">
+        <div class="banner-content">
+          <span class="line left">＼</span>
+          <div class="text">
+            <p>そんな時は<span class="highlight">"仲間に会う"</span><br>冒険に出かけよう！</p>
+          </div>
+          <span class="line right">／</span>
+        </div>
+        <img src="img/earth.png" alt="地球" class="globe-img">
+      </div>
+      <div class="run_man_area">
+        <div class="run_man">
+          <div class="run_man_img">
+            <img src="img/hamchans4.png" alt="走る人">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="question" id="question">
+      <div class="question-box">
+        <h2><img class="logo-img" alt="ロゴ" src="./img/logo01.png"><span class="font-leaf">Meta<span
+              class="green">Leaf</span></span>とは？</h2>
+        <p>プログラミングを学習している方とつながり、高め合い、切磋琢磨しながら<br>
+          共に支え合い、成長できるコミュニティです。<br>
+          ここで仲間を見つけ、みんなで一緒に<span class="red">レベルアップ</span>をしていきましょう！</p>
+      </div>
+    </section>
+    <section class="friends container">
+      <div class="friends-box odd">
+        <h3 class="friends-heading font">仲間</h3>
+        <div class="friends-item">
+          <div class="friends-text">
+            <p><span class="text-bg green">輪が広がる</span><br>初めてでどうしたらいいか困ったら<br>名前に「🥲」の絵文字を<br>追加するだけ！ご案内いたします！</p>
+          </div>
+          <div class="friends-item-img">
+            <img class="friends-img" alt="仲間と集まる" src="./img/friends1.jpg">
+            <p class="friends-text-odd">初めての方も安心</p>
+          </div>
+        </div>
+        <span class="circle1-top"></span>
+        <span class="circle1-bottom"></span>
+      </div>
+      <div class="friends-box even">
+        <h3 class="friends-heading font">集中</h3>
+        <div class="friends-item">
+          <div class="friends-item-img">
+            <img class="friends-img" alt="もくもくルームで作業する人" src="./img/friends2.jpg">
+            <p class="friends-text-even">もくもくルームあり</p>
+          </div>
+          <div class="friends-text">
+            <p class="near">入室可能時間<br><span class="red text-bg">5：00～25：00</span></p>
+            <p>モチベーション維持したい<br>そんな方に最適</p>
+          </div>
+        </div>
+        <span class="circle2-top"></span>
+        <span class="circle2-bottom"></span>
+      </div>
+      <div class="friends-box odd">
+        <h3 class="friends-heading font">話す</h3>
+        <div class="friends-item">
+          <div class="friends-text">
+            <p>実際には<br>なかなか会えなくても</p>
+            <p><span class="font-leaf text-bg">Meta<span class="green">Leaf</span></span>なら会える</p>
+          </div>
+          <div class="friends-item-img">
+            <img class="friends-img" alt="話している" src="./img/friends3.jpg">
+            <p class="friends-text-odd">ビデオ通話も可能！</p>
+          </div>
+        </div>
+        <span class="circle3-top"></span>
+        <span class="circle3-bottom"></span>
+      </div>
+      <div class="friends-box even">
+        <h3 class="friends-heading font">学ぶ</h3>
+        <div class="friends-item">
+          <div class="friends-item-img">
+            <img class="friends-img-bg" alt="セミナーの様子" src="./img/friends4.png">
+            <p class="friends-text-even"><span class="red">スキル向上</span>はもちろんのこと<br>自分の<span class="red">マインドも進化
+                </span>すること<br>間違いなし！！</p>
+          </div>
+          <div class="friends-text">
+            <p>毎週<span class="text-bg">月</span>曜日21：00～<br><span class="red text-bg">プレミアム作業会</span>を開催</p>
+          </div>
+        </div>
+        <span class="circle4-top"></span>
+        <span class="circle4-bottom"></span>
+      </div>
+      <div class="friends-box odd">
+        <h3 class="friends-heading font">交流</h3>
+        <div class="friends-item">
+          <div class="friends-text">
+            <p>分からないことを聞いたり、<br><span class="red text-bg">情報交換</span>をして、<br>お互いに<span class="red text-bg">スキルアップ</span>
+            </p>
+          </div>
+          <div class="friends-item-img">
+            <img class="friends-img-bg" alt="仲間と集まる" src="./img/friends5.jpg">
+            <p class="friends-text-odd">オンライン飲み会も開催！</p>
+          </div>
+        </div>
+        <span class="circle5-top"></span>
+        <span class="circle5-bottom"></span>
+      </div>
+    </section>
+
+    <section class="avatar" id="avatar">
+      <div class="container">
+        <h2>アバター</h2>
+        <div class="avatar-text">
+          <p class="red">組み合わせは2兆越え！！</p>
+          <p class="red">自分だけのオリジナルを作成しよう♬</p>
+        </div>
+
+        <ul class="slider">
+          <li class="slide"><img src="/img/avatar/avatar0.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar1.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar2.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar3.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar4.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar5.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar6.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar7.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar8.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar9.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar10.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar11.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar12.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar13.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar14.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar15.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar16.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar17.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar18.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar19.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar20.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar21.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar22.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar23.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar24.png" alt="アバター画像"></li>
+          <li class="slide"><img src="/img/avatar/avatar25.png" alt="アバター画像"></li>
+        </ul>
+
+        <div>
+          <a href="avatar.html" class="button-gr bgcenterx">メタ図鑑を見る？</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="method" class="method">
+      <h2>操作方法</h2>
+      <div class="monitor-container">
+        <img src="img/monitor.png" alt="モニター" class="monitor">
+        <img src="img/move.png" alt="会話している様子" class="move">
+      </div>
+      <div>
+        <a href="method.html" class="button-gr bgcenterx">操作方法はこちら</a>
+      </div>
+    </section>
+
+    <section class="floor-map" id="floormap">
+      <h2>フロアマップ</h2>
+      <div class="floor-grid">
+        <div class="floor">
+          <div class="floor-box">
+            <h3>【セミナー会場】</h3>
+            <p>主に毎週月曜日にセミナーが行われる会場</p>
+          </div>
+          <img src="/img/map/map.jpg" alt="セミナー会場">
+        </div>
+
+        <div class="floor">
+          <div class="floor-box">
+            <h3>【Pフロア】</h3>
+            <p>主にこのフロアで作業＆交流するスペース</p>
+          </div>
+          <img src="/img/map/map1.jpg" alt="Pフロア" class="floor-img">
+          <div>
+            <a href="floorMap.html" class="button-gr bgcenterx">Pフロア詳細を見る</a>
+          </div>
+        </div>
+
+        <div class="floor">
+          <div class="floor-box">
+            <h3>【Sフロア】</h3>
+            <p>主にデザインを学んでいる方の作業スペース</p>
+          </div>
+          <img src="img/map/sakurabo.jpg" alt="Sフロア">
+        </div>
+      </div>
+      <div class="hamchans-footer"><img src="img/hamchans.png" alt="はむちゃんず"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#top-page" class="footer-logo">
+      <img src="img/logo01.png" alt="MetaLeafロゴ" />
+    </a>
+    <nav class="footer-nav">
+      <a href="#question">MetaLeafについて</a>
+      <a href="#avatar">アバター</a>
+      <a href="#method">操作方法</a>
+      <a href="#floormap">フロアマップ</a>
+    </nav>
+    <hr class="footer-line" />
+    <div class="footer-copy">&copy; MetaLeaf 2025</div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/jquery-main.js"></script>
+
+</body>
+
+</html>
