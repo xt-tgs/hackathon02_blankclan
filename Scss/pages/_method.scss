@@ -1,0 +1,281 @@
+@use'../common/mixin' as m;
+
+/* 下層ページ--------- */
+
+.icon {
+    width: 50px;
+}
+
+.tab {
+    &-area {
+        display: flex;
+        gap: 4%;
+        border-radius: 10px;
+        background-color: var(--white);
+    }
+}
+
+.tab {
+    width: calc(100% / 3);
+    cursor: pointer;
+    font-size: 2.5rem;
+    display: inline-block;
+    border-bottom: solid 6px var(--main);
+    margin-bottom: 70px;
+}
+
+/* activeクラスがついた時、背景をグレーにする */
+.tab.active {
+    background-color: rgb(180, 180, 180);
+}
+
+.panel {
+    &-area {
+        padding: 0 16%;
+        background-color: var(--white);
+        border-radius: 10px;
+    }
+}
+
+/* 最初は非表示 */
+.panel {
+    display: none;
+}
+
+/* activeクラスがついた時のみ、表示する */
+.panel.active {
+    display: block;
+}
+
+.panel {
+    dl {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 20px;
+    }
+}
+
+.panel {
+    dt {
+        width: 87%;
+        text-align: left;
+        border-bottom: dotted 1px #000;
+        margin-bottom: 25px;
+    }
+}
+
+.panel {
+    dd {
+        width: 13%;
+        text-align: right;
+        padding-top: 8px;
+        border-bottom: 1px dotted #000;
+        margin-bottom: 25px;
+    }
+}
+
+.menu {
+    &-content {
+        width: 1000px;
+        margin: 0 auto 119px;
+    }
+}
+
+.keyboard {
+    border: 1px solid var(--black);
+    border-radius: 10px;
+    padding: 10px 17px;
+    box-shadow: 3px 3px 6px -2px #555,
+        3px 3px 8px rgba(255, 255, 255, 0.8) inset;
+    margin-bottom: 10px;
+}
+
+
+.bottom {
+    &-menu {
+        &-box {
+            position: relative;
+        }
+
+        &-item {
+            background-color: var(--sub);
+            color: var(--black);
+            border: 1px solid var(--main);
+            padding: 10px;
+            width: calc(100% / 3);
+            border-radius: 10%;
+            margin: 60px 0;
+            position: relative;
+        }
+
+        &-flex {
+            display: flex;
+            gap: 15px;
+
+        }
+    }
+
+    &-left {
+        position: absolute;
+        top: -45px;
+        right: 73px;
+        border: 2px solid var(--main);
+        width: 114px;
+        transform: rotate(-50deg);
+    }
+
+    &-center {
+        position: absolute;
+        top: -45px;
+        left: 59px;
+        border: 2px solid var(--main);
+        width: 123px;
+        transform: rotate(-45deg);
+    }
+
+    &-right {
+        position: absolute;
+        top: -54px;
+        left: -2px;
+        border: 2px solid var(--main);
+        width: 115px;
+        transform: rotate(-115deg);
+    }
+}
+
+.top {
+    &-left {
+        position: absolute;
+        bottom: -39px;
+        right: -58px;
+        border: 2px solid var(--main);
+        width: 120px;
+        transform: rotate(40deg);
+    }
+
+    &-center {
+        position: absolute;
+        bottom: -36px;
+        left: 26px;
+        border: 2px solid var(--main);
+        width: 94px;
+        transform: rotate(48deg);
+    }
+
+    &-right {
+        position: absolute;
+        bottom: -34px;
+        left: 40px;
+        border: 2px solid var(--main);
+        width: 86px;
+        transform: rotate(50deg);
+    }
+}
+
+.line {
+    &-left {
+        position: absolute;
+        bottom: -34px;
+        left: 40px;
+        border: 2px solid var(--main);
+        width: 86px;
+        transform: rotate(50deg);
+    }
+
+    &-right {
+        position: absolute;
+        bottom: -34px;
+        left: 40px;
+        border: 2px solid var(--main);
+        width: 86px;
+        transform: rotate(50deg);
+    }
+}
+
+
+.menu {
+    &-heading {
+        background-color: var(--main);
+        color: var(--white);
+        padding: 3px 40px 3px 0;
+        position: absolute;
+        width: 203px;
+        top: -16px;
+        left: -100px;
+        clip-path: polygon(0 0, 100% 0, 94% 90%, 0 90%);
+    }
+}
+
+.left {
+    &-menu {
+        display: flex;
+
+        &-item {
+            width: 300px;
+            position: relative;
+            margin: 30px 45px 70px 10px;
+
+            h3 {
+                text-align: right;
+            }
+
+            &:nth-child(2) {
+                margin-bottom: -5px;
+            }
+
+            &:nth-child(3) {
+                margin-bottom: -10px;
+            }
+
+            &:nth-child(4) {
+                margin-bottom: 338px;
+            }
+
+            span {
+                position: absolute;
+                top: 0;
+                left: -69px;
+                border: 2px solid var(--main);
+                width: 81px;
+                transform: rotate(40deg);
+            }
+        }
+
+        &-img {
+            height: 780px;
+            width: 115px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+}
+
+.hamchans {
+    &-top {
+        width: 25%;
+        position: absolute;
+        top: 191px;
+        right: 178px;
+    }
+
+    &-bottom {
+        width: 32%;
+        position: absolute;
+        bottom: 190px;
+        right: 203px;
+    }
+}
+
+.profile {
+    margin-top: 80px;
+
+    h3 {
+        left: -2px;
+        padding: 3px 33px 3px 0;
+        width: 143px;
+    }
+
+    img {
+        width: 275px;
+    }
+}

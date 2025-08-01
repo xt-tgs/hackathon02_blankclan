@@ -1,0 +1,183 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.75;
+    background-color: var(--background);
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+:root {
+    --main: #3EA399;
+    --sub: #9EE9D7;
+    --red: #E66144;
+    --black: #333937;
+    --white: #fff;
+    --background: #F7F8EC;
+}
+
+
+/* 部品
+------------------------------------------ */
+
+.font {
+    font-family: "DotGothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    &-leaf {
+        font-family: "Be Vietnam Pro", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    &-gothic {
+        font-family: 'Yu Gothic', 'YuGothic', sans-serif;
+    }
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px 0 100px;
+}
+
+main {
+    min-height: 500px;
+}
+
+h2 {
+    font-size: 55px;
+    text-align: center;
+    font-family: 'Yu Gothic', 'YuGothic', sans-serif;
+    color: #3EA399;
+    padding-bottom: 20px;
+}
+
+.red {
+    color: var(--red);
+}
+
+.green {
+    color: var(--main);
+}
+
+.logo {
+    &-img {
+        width: 40px;
+    }
+}
+
+
+/* ボタン
+------------------------------------------ */
+.button {
+    display: block;
+    background-color: var(--sub);
+    border: 2px solid var(--white);
+    border-radius: 40px;
+    font-size: 20px;
+    /* ボタンの影 */
+    box-shadow: 1px 4px rgba(0, 0, 0, 0.25);
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    color: var(--black);
+    max-width: 300px;
+    padding: 15px;
+}
+
+
+
+/* menu
+------------------------------------------ */
+.menu {
+    // min-height: 100svh;
+    position: relative;
+    overflow: clip;
+}
+
+.menu {
+    &-nav {
+        display: grid;
+        gap: 3px;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        translate: 0 -50%;
+        background-color: var(--white);
+        // border-top: 1px solid #3EA399;
+        // border-right: 1px solid #3EA399;
+        // border-bottom: 1px solid #3EA399;
+        border-radius: 0 1.4375rem 1.4375rem 0;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        padding: 10px 15px;
+        z-index: 1000;
+
+        li {
+            a {
+                display: inline-block;
+                -webkit-writing-mode: vertical-rl;
+                -ms-writing-mode: tb-rl;
+                writing-mode: vertical-rl;
+                padding: 12px 15px;
+                background-color: var(--main);
+                color: var(--white);
+                border-radius: 100vmax;
+                font-size: 13px;
+                line-height: 1;
+                font-weight: bold;
+                letter-spacing: 0.5em;
+                min-height: 6.9375rem;
+                text-align: center;
+                -webkit-transition: background-color 0.3s ease-in-out;
+                transition: background-color 0.3s ease-in-out;
+            }
+
+        }
+    }
+}
+
+
+/* 下層ページの背景
+------------------------------------------ */
+.lower-bg {
+    display: block;
+    max-width: 850px;
+    width: 50%;
+    height: auto;
+    padding-top: 80px;
+    position: absolute;
+    bottom: 0px;
+    right: -225px;
+    animation: 20s linear infinite rotation;
+    z-index: -100;
+    opacity: 0.3;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
