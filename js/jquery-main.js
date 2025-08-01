@@ -212,11 +212,11 @@ $(function () {
     var imgSets = [];
     for (var i = 0; i < allImages.length; i += 6) {
         var set = allImages.slice(i, i + 6).map(function (name) {
-            return "/img/transparent/" + name + "_transparent.png";
+            return "img/transparent/" + name + "_transparent.png";
         });
         var j = 0;
         while (set.length < 6) {
-            set.push("/img/transparent/" + allImages[j++] + "_transparent.png");
+            set.push("img/transparent/" + allImages[j++] + "_transparent.png");
         }
         imgSets.push(set);
     }
