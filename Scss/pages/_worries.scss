@@ -1,0 +1,218 @@
+@use'../common/mixin' as m;
+
+.worries-box {
+    position: relative;
+    height: 530px;
+
+    @include m.sp {
+        height: 400px;
+    }
+}
+
+.thinker {
+    max-width: 230px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.bubble {
+    border-radius: 40px;
+    padding: 15px 25px;
+    background-color: #9EE9D7;
+    max-width: 450px;
+    position: absolute;
+    font-size: 24px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    // opacity: 0;
+
+    @include m.sp {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    &:first-child {
+        top: 10%;
+        left: 26%;
+
+        @include m.sp {
+            top: 10%;
+            left: 8%;
+        }
+    }
+
+    &:nth-child(2) {
+        top: 13%;
+        left: 63%;
+
+        @include m.sp {
+            top: 13%;
+            left: 56%;
+        }
+    }
+
+    &:nth-child(3) {
+        top: 30%;
+        left: 36%;
+        font-size: 30px;
+
+        @include m.sp {
+            top: 29%;
+            left: 17%;
+            font-size: 20px;
+        }
+    }
+
+    &:nth-child(4) {
+        top: 49%;
+        left: 22%;
+
+        @include m.sp {
+            top: 47%;
+            left: 7%;
+        }
+    }
+
+    &:nth-child(5) {
+        bottom: 35%;
+        left: 64%;
+
+        @include m.sp {
+            bottom: 39%;
+            left: 58%;
+        }
+    }
+
+    &:last-child {
+        bottom: 13%;
+        left: 31%;
+
+        @include m.sp {
+            bottom: 20%;
+            left: 12%;
+        }
+    }
+
+    &::after {
+        content: "";
+        border-style: solid;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+        border-bottom: 33px solid #9ee9d7;
+        border-top: 0;
+        transform: rotate(38deg);
+        position: absolute;
+        top: 76%;
+        right: 19%;
+
+        @include m.sp {
+            border-right: 10px solid transparent;
+            border-left: 10px solid transparent;
+            border-bottom: 20px solid #9ee9d7;
+            transform: rotate(38eg);
+            top: 76%;
+            right: 19%;
+        }
+    }
+
+}
+
+.bubble.fadeUp:nth-child(1) { animation-delay: 0s; }
+.bubble.fadeUp:nth-child(2) { animation-delay: 0.2s; }
+.bubble.fadeUp:nth-child(3) { animation-delay: 0.4s; }
+.bubble.fadeUp:nth-child(4) { animation-delay: 0.6s; }
+.bubble.fadeUp:nth-child(5) { animation-delay: 0.8s; }
+.bubble.fadeUp:nth-child(6) { animation-delay: 1s; }
+
+
+.bubble.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 1; // 念のため
+}
+
+.adventure-banner {
+    position: relative;
+    background-color: #f7f8ec;
+    text-align: center;
+    padding: 100px 20px;
+    overflow: hidden;
+
+    .banner-content {
+        position: relative;
+        background-color: rgba(62, 163, 153, 0.58);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 60px;
+        border-radius: 5px;
+        font-family: 'DotGothic16', sans-serif;
+        font-size: 2.8rem;
+        color: white;
+        z-index: 2;
+
+        .line {
+            font-size: 7rem;
+            color: white;
+            margin: 0 20px;
+        }
+
+        .text {
+            p {
+                margin: 0;
+                line-height: 1.8;
+
+                .highlight {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .globe-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        max-width: 800px;
+        transform: translate(-50%, -50%);
+        opacity: 0.2;
+        z-index: 1;
+        pointer-events: none;
+    }
+}
+
+
+@keyframes fadeUpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 走る人 */
+.run_man_area {
+    height: 60px;
+    overflow: hidden;
+}
+
+.run_man {
+    position: relative;
+    height: 100%;
+}
+
+.run_man_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.run_man_img img {
+    height: 60px;
+    width: auto;
+}

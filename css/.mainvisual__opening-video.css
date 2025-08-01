@@ -1,0 +1,22 @@
+#opening-video-layer {
+  position: fixed;
+  z-index: 99999;
+  inset: 0;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s;
+}
+
+#opening-video-layer.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#opening-video {
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=.mainvisual__opening-video.css.map */

@@ -1,0 +1,62 @@
+@use'../common/mixin' as m;
+
+.footer {
+  background: #d9f0f0;
+  text-align: center;
+  padding: 56px 0 24px;
+  width: 100%;
+
+  .footer-logo {
+    display: inline-block;
+    margin-bottom: 32px;
+
+    img {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: box-shadow 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+      }
+    }
+  }
+
+  .footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 96px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+
+  a {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #19c4cf;
+    }
+  }
+}
+
+  .footer-line {
+    margin: 0 auto 20px;
+    width: 80%;
+    border: none;
+    border-top: 1px solid #8caaa6;
+    opacity: 0.6;
+  }
+
+  .footer-copy {
+    color: #484848;
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
+  }
+}

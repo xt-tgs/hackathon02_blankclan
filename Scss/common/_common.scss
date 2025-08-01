@@ -1,0 +1,352 @@
+@charset "UTF-8";
+@use'../common/mixin' as m;
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.75;
+    background-color: var(--background);
+    font-family: "Noto Sans JP", sans-serif;
+    min-height: 100vh;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+:root {
+    --main: #3EA399;
+    --sub: #9EE9D7;
+    --red: #E66144;
+    --black: #333937;
+    --white: #fff;
+    --background: #F7F8EC;
+}
+
+
+/* 部品
+------------------------------------------ */
+
+.font {
+    font-family: "DotGothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    &-leaf {
+        font-family: "Be Vietnam Pro", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 3.8px;
+    }
+
+    &-gothic {
+        font-family: 'Yu Gothic', 'YuGothic', sans-serif;
+    }
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px 0 40px;
+
+    @include m.sp {
+        max-width: 980px;
+    }
+}
+
+main {
+    min-height: 500px;
+}
+
+h2 {
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Yu Gothic', 'YuGothic', sans-serif;
+    color: #3EA399;
+    padding-bottom: 20px;
+
+    @include m.sp {
+        font-size: 32px;
+    }
+}
+
+h4 {
+    font-size: 15px;
+
+    @include m.sp {
+        font-size: 11px;
+    }
+}
+
+.red {
+    color: var(--red);
+}
+
+.green {
+    color: var(--main);
+}
+
+.logo {
+    &-img {
+        width: 40px;
+
+        @include m.sp {
+            width: 25px;
+        }
+    }
+}
+
+.pc {
+    @include m.sp {
+        display: none;
+    }
+}
+
+.sp {
+    display: none;
+
+    @include m.sp {
+        display: inline-block;
+    }
+}
+
+
+
+/* ボタン
+------------------------------------------ */
+.button-gr {
+    display: block;
+    background-color: var(--sub);
+    border: 2px solid var(--white);
+    border-radius: 40px;
+    font-size: 20px;
+    /* ボタンの影 */
+    box-shadow: 1px 4px rgba(0, 0, 0, 0.25);
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    color: var(--black);
+    max-width: 270px;
+    padding: 12px 15px;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: ease .2s;
+
+    @include m.sp {
+        font-size: 16px;
+        max-width: 220px;
+        padding: 12px;
+    }
+}
+
+/*ボタン内spanの形状*/
+.button-gr span {
+    position: relative;
+    z-index: 3;
+    /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+    color: var(--white);
+}
+
+.button-gr:hover {
+    color: #fff;
+
+    background-color: var(--main);
+}
+
+/*== 背景が流れる（左から右） */
+.bgleft:before {
+    content: '';
+    /*絶対配置で位置を指定*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    /*色や形状*/
+    background: var(--main);
+    // color: var(--white);
+    /*背景色*/
+    width: 100%;
+    height: 100%;
+    /*アニメーション*/
+    transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    transform: scale(0, 1);
+    transform-origin: right top;
+}
+
+/*hoverした際の形状*/
+.bgleft:hover:before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+
+
+/* menu
+------------------------------------------ */
+.menu {
+    // min-height: 100svh;
+    position: relative;
+    overflow: clip;
+    z-index: 2000;
+
+    &-nav {
+        display: grid;
+        gap: 2px;
+        position: fixed;
+        top: 56%;
+        left: 0;
+        translate: 0 -50%;
+        background-color: var(--white);
+        border-radius: 0 1.4375rem 1.4375rem 0;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        padding: 5px 8px;
+        z-index: 1000;
+
+        @include m.sp {
+            display: none;
+        }
+
+        li {
+            a {
+                display: inline-block;
+                writing-mode: vertical-rl;
+                padding: 12px 10px;
+                background-color: var(--main);
+                color: var(--white);
+                border-radius: 100vmax;
+                font-size: 12px;
+                line-height: 1;
+                font-weight: bold;
+                letter-spacing: 0.5em;
+                min-height: 6.9375rem;
+                text-align: center;
+                -webkit-transition: background-color 0.3s ease-in-out;
+                transition: background-color 0.3s ease-in-out;
+            }
+
+        }
+    }
+}
+
+
+.menu-nav {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+
+    &.menu-nav--visible {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+
+/* 下層ページの背景
+------------------------------------------ */
+.lower {
+    &-background {
+        position: relative;
+        width: 100%;
+        height: auto;
+        z-index: -10000;
+        padding-top: 80px;
+    }
+
+    &-bg {
+        max-width: 210px;
+        border-radius: 100px;
+        width: 100%;
+        display: block;
+        position: absolute;
+        overflow: hidden;
+        bottom: 20px;
+        right: 70px;
+        opacity: 0.3;
+        z-index: -10000;
+        animation: 20s linear infinite rotation;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* page top
+------------------------------------------ */
+.button {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 80px;
+    right: 20px;
+    bottom: -160px;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    border: 0;
+    background: var(--main);
+    transition: .2s;
+    letter-spacing: 3px;
+    font-weight: bold;
+    border-radius: 100px 100px 0 0;
+    z-index: 1000;
+}
+
+.button i {
+    position: absolute;
+    font-size: 30px;
+    color: #FFF;
+    top: 15px;
+    font-weight: 300;
+}
+
+.button p {
+    margin: 0;
+    font-size: 15px;
+    bottom: 13px;
+    position: absolute;
+}
+
+.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.button.is-active {
+    bottom: 0px;
+}
+
+// -------------------------------------------------------
+// ジャンプ位置調整
+// -------------------------------------------------------
+#question,
+#method,
+#floormap {
+    scroll-margin-top: 80px;
+}

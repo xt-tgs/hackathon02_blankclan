@@ -1,0 +1,10 @@
+// ブレイクポイントを指定
+$sp: 980px;
+
+//全ページ共通
+@mixin sp{
+    @media(max-width:($sp)){
+        @content;
+    }
+}
+

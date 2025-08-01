@@ -1,0 +1,619 @@
+@use'../common/mixin' as m;
+
+.header_method {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+  /* ▼ グラデーション背景だけ透明度0.8 */
+    background: linear-gradient(100deg, rgba(225,247,187,0.7) 0%, rgba(25,196,207,0.7) 100%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.bar_method {
+    position: relative;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 8px 32px; // 横にゆとり。上下調整も可
+    z-index: 10;
+    margin-left: 24px;
+    overflow: visible;
+    opacity: 1; // ← barは常に表示
+}
+
+.logo-set_method {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-icon_method {
+    height: 32px;
+    width: auto;
+    display: block;
+}
+
+.logo-text_method {
+    height: 32px;
+    width: auto;
+    display: block;
+}
+
+/* method ------------------------------------------ */
+.method {
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 120px;
+
+    h2 {
+        color: #3EA399;
+        font-size: 55px;
+        margin-bottom: 20px;
+    }
+}
+
+.monitor-container {
+    position: relative;
+    width: 90%;
+    max-width: 460px;
+    margin: 40px auto;
+
+    &::before {
+        content: "OPERATION  ATION";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+        font-size: 140px;
+        font-weight: bold;
+        color: #9ee9d7;
+        opacity: 0.3;
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: -1;
+
+        @include m.sp {
+            display: none;
+        }
+    }
+
+    .monitor {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+
+    .move {
+        position: absolute;
+        top: 47%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+        width: 94%;
+        z-index: 2;
+    }
+}
+
+
+
+
+
+/* 下層ページ--------- */
+
+.method {
+    &-lower {
+        position: relative;
+        margin-top: 80px;
+
+        h2 {
+            margin: 80px 0 40px;
+
+            @include m.sp {
+                margin: 50px 0 15px;
+            }
+        }
+    }
+}
+
+.icon {
+    width: 50px;
+}
+
+.tab {
+    background-color: var(--white);
+    width: calc(100% / 3);
+    cursor: pointer;
+    font-size: 2.5rem;
+    display: inline-block;
+    // border-bottom: solid 6px var(--main);
+    border-radius: 10px 10px 0 0;
+    padding: 15px 0;
+    text-align: center;
+
+    @include m.sp {
+        font-size: 12px;
+        padding: 10px 0;
+    }
+
+
+    &-area {
+        display: flex;
+        gap: 4%;
+        border-radius: 10px;
+    }
+}
+
+
+/* activeクラスがついた時、背景をグレーにする */
+.tab.active {
+    background-color: #D6F4EE;
+}
+
+.panel {
+    /* 最初は非表示 */
+    display: none;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 60px 50px 50px;
+
+    @include m.sp {
+        padding: 45px 20px 15px;
+    }
+
+    &-area {
+        padding: 70px 50px;
+        background-color: #D6F4EE;
+        border-radius: 0 0 20px 20px;
+
+        @include m.sp {
+            padding: 20px 12px;
+        }
+    }
+
+    h3 {
+        font-size: 32px;
+        text-align: center;
+        padding-bottom: 50px;
+
+        @include m.sp {
+            font-size: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    dl {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 20px;
+        max-width: 530px;
+        margin: 0 auto 50px;
+
+        @include m.sp {
+            max-width: 260px;
+        }
+    }
+
+    dt {
+        width: 60%;
+        text-align: left;
+        border-bottom: dotted 1px #000;
+        text-align: center;
+    }
+
+    dd {
+        width: 40%;
+        text-align: right;
+        padding: 15px 35px 20px 0px;
+        border-bottom: 1px dotted #000;
+
+
+        img {
+            padding-left: 10px;
+        }
+    }
+
+}
+
+.method-left {
+    padding: 15px 0px 0px 2px;
+}
+
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 15px solid #555555;
+    border-right: 0;
+    padding: 10px;
+    z-index: 10;
+}
+
+/* activeクラスがついた時のみ、表示する */
+.panel.active {
+    display: block;
+}
+
+.menu {
+    &-content {
+        max-width: 905px;
+        margin: 0 auto 119px;
+
+        @include m.sp {
+            width: 346px;
+            margin: 0 auto 60px;
+        }
+    }
+}
+
+.keyboard {
+    border: 1px solid var(--black);
+    border-radius: 10px;
+    padding: 7px 15px;
+    box-shadow: 3px 3px 6px -2px #555,
+        3px 3px 8px rgba(255, 255, 255, 0.8) inset;
+    margin-bottom: 10px;
+}
+
+.bottom {
+    &-menu {
+        &-box {
+            position: relative;
+            text-align: center;
+
+            @include m.sp {
+                margin-bottom: 40px;
+            }
+        }
+
+        &-item {
+            background-color: var(--sub);
+            color: var(--black);
+            border: 1px solid var(--main);
+            padding: 10px;
+            width: calc(100% / 3);
+            border-radius: 10px;
+            margin: 60px 0;
+            position: relative;
+            text-align: left;
+
+            @include m.sp {
+                width: 96%;
+                margin: 0px 10px 0 0;
+            }
+        }
+
+        &-flex {
+            display: flex;
+            // align-items: flex-start;
+            gap: 15px;
+
+            @include m.sp {
+                flex-direction: column;
+                margin-bottom: 10px;
+            }
+        }
+
+        &-img {
+            @include m.sp {
+                margin-bottom: 12px;
+            }
+
+            &-top {
+                @include m.sp {
+                    max-width: 60px;
+                    height: 200px;
+                    margin-bottom: 55px;
+                }
+            }
+        }
+    }
+
+    &-left {
+        position: absolute;
+        top: -45px;
+        right: 78px;
+        border: 2px solid var(--main);
+        width: 114px;
+        transform: rotate(-50deg);
+
+        @include m.sp {
+            top: 68px;
+            left: 263px;
+            width: 32px;
+            transform: rotate(180deg);
+            border-top: 3px solid var(--main);
+            border-bottom: 3px solid var(--main);
+            border-left: 3px solid var(--main);
+            border-right: none;
+            height: 172px;
+        }
+    }
+
+    &-center {
+        position: absolute;
+        top: -45px;
+        left: 59px;
+        border: 2px solid var(--main);
+        width: 123px;
+        transform: rotate(-45deg);
+
+        @include m.sp {
+            top: 83px;
+            left: -13px;
+            width: 32px;
+            transform: rotate(0deg);
+            border-top: 3px solid var(--main);
+            border-bottom: 3px solid var(--main);
+            border-left: 3px solid var(--main);
+            border-right: none;
+            height: 116px;
+        }
+    }
+
+    &-right {
+        position: absolute;
+        top: -54px;
+        left: -2px;
+        border: 2px solid var(--main);
+        width: 115px;
+        transform: rotate(-115deg);
+
+        @include m.sp {
+            top: -179px;
+            left: -12px;
+            width: 30px;
+            transform: rotate(0deg);
+            border-top: 3px solid var(--main);
+            border-bottom: 3px solid var(--main);
+            border-left: 3px solid var(--main);
+            border-right: none;
+            height: 188px;
+        }
+    }
+
+    &-img {
+        &-bottom {
+            max-width: 200px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.top {
+    &-left {
+        position: absolute;
+        bottom: -39px;
+        right: -58px;
+        border: 2px solid var(--main);
+        width: 120px;
+        transform: rotate(40deg);
+
+        @include m.sp {
+            bottom: 67px;
+            right: -32px;
+            width: 34px;
+            transform: rotate(31deg);
+        }
+    }
+
+    &-center {
+        position: absolute;
+        bottom: -36px;
+        left: 26px;
+        border: 2px solid var(--main);
+        width: 94px;
+        transform: rotate(48deg);
+
+        @include m.sp {
+            bottom: 104px;
+            left: 186px;
+            width: 56px;
+            transform: rotate(-37deg);
+        }
+    }
+
+    &-right {
+        position: absolute;
+        bottom: -34px;
+        left: 40px;
+        border: 2px solid var(--main);
+        width: 86px;
+        transform: rotate(50deg);
+    }
+}
+
+.line {
+    &-left {
+        position: absolute;
+        top: -46px;
+        left: 40px;
+        border: 2px solid var(--main);
+        width: 95px;
+        transform: rotate(-69deg);
+
+        @include m.sp {
+            top: 67px;
+            left: 17px;
+            width: 30px;
+            transform: rotate(0deg);
+            border-top: none;
+            border-bottom: 3px solid var(--main);
+            border-left: 3px solid var(--main);
+            border-right: none;
+            height: 116px;
+        }
+    }
+
+    &-right {
+        position: absolute;
+        top: -49px;
+        left: 0px;
+        border: 2px solid var(--main);
+        width: 107px;
+        transform: rotate(-65deg);
+
+        @include m.sp {
+            top: -126px;
+            left: 234px;
+            width: 30px;
+            transform: rotate(180deg);
+            border-top: none;
+            border-bottom: 3px solid var(--main);
+            border-left: 3px solid var(--main);
+            border-right: none;
+            height: 134px;
+        }
+    }
+}
+
+.leaving {
+    gap: 85px;
+
+    @include m.sp {
+        gap: 10px;
+    }
+
+    &-item {
+        width: 300px;
+    }
+}
+
+
+.menu {
+    &-heading {
+        background-color: var(--main);
+        color: var(--white);
+        padding: 1px 40px 1px 0;
+        position: absolute;
+        width: 203px;
+        top: -16px;
+        left: -100px;
+        clip-path: polygon(0 0, 100% 0, 94% 90%, 0 90%);
+
+        @include m.sp {
+            padding: 0px 23px 1px 0;
+            width: 139px;
+            left: -62px;
+        }
+    }
+}
+
+.left {
+    &-menu {
+        display: flex;
+
+        &-item {
+            width: 283px;
+            position: relative;
+            margin: 30px 45px 70px 10px;
+
+            @include m.sp {
+                width: 235px;
+                margin: 15px 45px 28px 0px;
+            }
+
+            h4 {
+                text-align: right;
+            }
+
+            &:nth-child(2) {
+                margin-bottom: -5px;
+            }
+
+            &:nth-child(3) {
+                margin-bottom: -10px;
+            }
+
+            &:nth-child(4) {
+                margin-bottom: 338px;
+
+                @include m.sp {
+                    margin-bottom: 243px;
+                }
+            }
+
+            span {
+                position: absolute;
+                top: 0;
+                left: -69px;
+                border: 2px solid var(--main);
+                width: 81px;
+                transform: rotate(40deg);
+            }
+        }
+
+        &-img {
+            height: 780px;
+            width: 115px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+
+            @include m.sp {
+                height: 600px;
+                width: 60px;
+            }
+        }
+    }
+
+}
+
+.hamchans {
+    &-top {
+        width: 25%;
+        position: absolute;
+        top: 186px;
+        right: 178px;
+
+        @include m.sp {
+            width: 38%;
+            top: 230px;
+            right: 90px;
+        }
+    }
+
+    &-bottom {
+        width: 32%;
+        position: absolute;
+        bottom: 160px;
+        right: 90px;
+
+        @include m.sp {
+            width: 45%;
+            bottom: 138px;
+            right: 52px;
+        }
+    }
+}
+
+.profile {
+    margin-top: 80px;
+
+    h4 {
+        left: -2px;
+        padding: 3px 33px 3px 0;
+        width: 175px;
+    }
+
+    img {
+        width: 275px;
+    }
+}
+
+.flex-box {
+    display: flex;
+}
