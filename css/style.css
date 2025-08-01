@@ -260,17 +260,7 @@ h4 {
   right: 70px;
   opacity: 0.3;
   z-index: -10000;
-  -webkit-animation: 20s linear infinite rotation;
-          animation: 20s linear infinite rotation;
-}
-
-@-webkit-keyframes rotation {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  animation: 20s linear infinite rotation;
 }
 
 @keyframes rotation {
@@ -368,10 +358,8 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 8px 32px;
@@ -696,14 +684,6 @@ h4 {
   cursor: pointer;
   z-index: 1;
 }
-@-webkit-keyframes earth-rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 @keyframes earth-rotate {
   from {
     transform: rotate(0deg);
@@ -713,8 +693,7 @@ h4 {
   }
 }
 .mainvisual-wrapper .mainvisual__earth.is-rotating {
-  -webkit-animation: earth-rotate 10s ease-in-out 1;
-          animation: earth-rotate 10s ease-in-out 1;
+  animation: earth-rotate 10s ease-in-out 1;
 }
 @media (max-width: 980px) {
   .mainvisual-wrapper .mainvisual__earth {
@@ -997,42 +976,33 @@ h4 {
 }
 
 .bubble.fadeUp:nth-child(1) {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .bubble.fadeUp:nth-child(2) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .bubble.fadeUp:nth-child(3) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 .bubble.fadeUp:nth-child(4) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 
 .bubble.fadeUp:nth-child(5) {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 
 .bubble.fadeUp:nth-child(6) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 .bubble.fadeUp {
-  -webkit-animation-name: fadeUpAnime;
-          animation-name: fadeUpAnime;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
   opacity: 1;
 }
 
@@ -1080,17 +1050,6 @@ h4 {
   pointer-events: none;
 }
 
-@-webkit-keyframes fadeUpAnime {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @keyframes fadeUpAnime {
   from {
     opacity: 0;
@@ -1129,16 +1088,13 @@ h4 {
   background: url(../img/background1.png);
   max-width: 100vw;
   height: 320px;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
-          clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
   padding-top: 55px;
-  -webkit-animation: fall 25s infinite linear;
-          animation: fall 25s infinite linear;
+  animation: fall 25s infinite linear;
 }
 @media (max-width: 980px) {
   .question {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 82%, 50% 100%, 0 82%);
-            clip-path: polygon(0 0, 100% 0, 100% 82%, 50% 100%, 0 82%);
+    clip-path: polygon(0 0, 100% 0, 100% 82%, 50% 100%, 0 82%);
     padding-top: 35px;
     height: 270px;
   }
@@ -1172,16 +1128,6 @@ h4 {
   .question p {
     font-size: 12px;
   }
-}
-
-@-webkit-keyframes fall {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 700px 700px;
-  }
-  /* 元の画像が700px × 700pxなので画像の大きさ分だけ動かす */
 }
 
 @keyframes fall {
@@ -1613,10 +1559,8 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 8px 32px;
@@ -1668,10 +1612,8 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 8px 32px;
@@ -1706,8 +1648,7 @@ h4 {
 
 .avatar {
   background-color: var(--white);
-  -webkit-clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 83%, 50% 92%, 0 83%);
-          clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 83%, 50% 92%, 0 83%);
+  clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 83%, 50% 92%, 0 83%);
   padding-top: 200px;
   margin: 0 auto;
   height: 940px;
@@ -1715,8 +1656,7 @@ h4 {
 }
 @media (max-width: 980px) {
   .avatar {
-    -webkit-clip-path: polygon(0 0, 50% 6%, 100% 0, 100% 82%, 50% 88%, 0 82%);
-            clip-path: polygon(0 0, 50% 6%, 100% 0, 100% 82%, 50% 88%, 0 82%);
+    clip-path: polygon(0 0, 50% 6%, 100% 0, 100% 82%, 50% 88%, 0 82%);
     padding-top: 70px;
     height: 580px;
   }
@@ -1974,10 +1914,8 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 8px 32px;
@@ -2425,8 +2363,7 @@ h4 {
   width: 203px;
   top: -16px;
   left: -100px;
-  -webkit-clip-path: polygon(0 0, 100% 0, 94% 90%, 0 90%);
-          clip-path: polygon(0 0, 100% 0, 94% 90%, 0 90%);
+  clip-path: polygon(0 0, 100% 0, 94% 90%, 0 90%);
 }
 @media (max-width: 980px) {
   .menu-heading {
@@ -2553,10 +2490,8 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 8px 32px;
@@ -3123,5 +3058,4 @@ body.noscroll {
   width: 100vw;
   position: fixed;
   overscroll-behavior: none;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
