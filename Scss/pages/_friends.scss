@@ -1,0 +1,469 @@
+@use'../common/mixin' as m;
+
+/* question
+------------------------------------------ */
+
+.question {
+    background: url(../img/background1.png);
+    max-width: 100vw;
+    height: 320px;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+    // opacity: 0.5;
+    padding-top: 55px;
+    animation: fall 25s infinite linear;
+
+    @include m.sp {
+        // max-width: 75vw;
+        clip-path: polygon(0 0, 100% 0, 100% 82%, 50% 100%, 0 82%);
+        padding-top: 35px;
+        height: 270px;
+    }
+
+    &-box {
+        margin: 0 auto;
+        text-align: center;
+        width: 680px;
+        padding-left: 50px;
+
+        @include m.sp {
+            padding-left: 18px;
+            width: 275px;
+        }
+    }
+
+    h2 {
+        font-size: 32px;
+        color: var(--black);
+
+        @include m.sp {
+            font-size: 24px;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        text-align: left;
+
+        @include m.sp {
+            font-size: 12px;
+        }
+    }
+}
+
+@keyframes fall {
+
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 700px 700px;
+    }
+
+    /* 元の画像が700px × 700pxなので画像の大きさ分だけ動かす */
+}
+
+/* friends
+------------------------------------------ */
+.friends {
+    padding: 80px 50px 50px;
+
+    @include m.sp {
+        padding: 50px 20px 30px;
+    }
+
+    &-box {
+        position: relative;
+        margin-bottom: 75px;
+
+        @include m.sp {
+            margin-bottom: 45px;
+        }
+
+        h3 {
+            color: var(--main);
+            font-size: 80px;
+            position: absolute;
+            writing-mode: vertical-rl;
+
+            @include m.sp {
+                font-size: 40px;
+            }
+        }
+    }
+
+    &-odd {
+        padding-right: 180px;
+    }
+
+
+
+    &-item {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        margin-right: 75px;
+        position: relative;
+        width: 920px;
+        margin: 0 auto;
+
+        @include m.sp {
+            width: 330px;
+        }
+
+        &-img {
+            position: relative;
+
+            @include m.sp {
+                padding-top: 113px;
+            }
+
+            .odd {
+                padding-right: 80px;
+            }
+        }
+
+    }
+
+    &-text {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 100px;
+        font-size: 15px;
+        height: 200px;
+        width: 445px;
+        line-height: 2;
+        letter-spacing: 5px;
+        position: absolute;
+        display: grid;
+        place-content: center;
+        z-index: -1;
+
+        @include m.sp {
+            font-size: 11px;
+            height: 150px;
+            padding: 20px 5px 5px 20px;
+            width: 295px;
+        }
+
+        p {
+            padding-bottom: 5px;
+        }
+
+        &-even {
+            font-size: 18px;
+            background-color: rgba(198, 240, 230, 0.8);
+            padding: 5px 15px;
+            position: absolute;
+            z-index: 100;
+            white-space: nowrap;
+            top: 75%;
+            left: 50%;
+            transform: translateX(-50%) rotate(-6deg);
+
+            @include m.sp {
+                font-size: 12px;
+                top: 86%;
+            }
+        }
+
+        &-odd {
+            font-size: 20px;
+            background-color: rgba(198, 240, 230, 0.8);
+            padding: 5px 15px;
+            position: absolute;
+            z-index: 100;
+            white-space: nowrap;
+            bottom: 9%;
+            right: 50%;
+            transform: translateX(50%) rotate(6deg);
+
+            @include m.sp {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &-img {
+        width: 300px;
+        border-radius: 170px;
+
+
+        @include m.sp {
+            width: 150px;
+        }
+
+        &-bg {
+            width: 450px;
+            border-radius: 170px;
+
+            @include m.sp {
+                max-width: 245px;
+            }
+        }
+    }
+}
+
+.odd .friends-text {
+    top: 50%;
+    left: 36%;
+    transform: translate(-50%, -50%);
+
+    @include m.sp {
+        top: 31%;
+        left: 59%;
+    }
+}
+
+.even .friends-text {
+    top: 50%;
+    right: -17%;
+    transform: translate(-50%, -50%);
+
+    @include m.sp {
+        top: 30%;
+        right: -29.5%;
+        z-index: -50;
+    }
+}
+
+.odd .friends-item {
+    justify-content: flex-end;
+
+    @include m.sp {
+        justify-content: flex-start;
+    }
+}
+
+.even .friends-item {
+    justify-content: flex-start;
+
+    @include m.sp {
+        justify-content: flex-end;
+    }
+}
+
+
+.odd .friends-heading {
+    top: 30px;
+    left: 0%;
+    letter-spacing: 30px;
+
+    @include m.sp {
+        top: 8px;
+        left: -4%;
+    }
+}
+
+.even .friends-heading {
+    top: 0%;
+    right: 0%;
+    letter-spacing: 30px;
+}
+
+.text {
+    &-bg {
+        font-size: 24px;
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    @include m.sp {
+        font-size: 20px;
+    }
+}
+
+.near {
+    line-height: 1.5;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.circle1 {
+    &-top {
+        position: absolute;
+        border: 3px solid rgba(62, 163, 153, 0.25);
+        border-radius: 62%;
+        width: 270px;
+        height: 270px;
+        top: -32%;
+        right: 0%;
+        z-index: -100;
+
+        @include m.sp {
+            width: 85px;
+            height: 85px;
+            top: -22%;
+            right: 63%;
+        }
+    }
+
+    &-bottom {
+        position: absolute;
+        border: 3px solid rgba(62, 163, 153, 0.25);
+        border-radius: 62%;
+        width: 125px;
+        height: 125px;
+        bottom: 0%;
+        right: 31%;
+        z-index: -100;
+
+        @include m.sp {
+            width: 105px;
+            height: 105px;
+            bottom: 18%;
+            right: 2%;
+        }
+    }
+}
+
+.circle2 {
+    &-top {
+        position: absolute;
+        border: 3px solid rgba(62, 163, 153, 0.25);
+        border-radius: 62%;
+        width: 230px;
+        height: 230px;
+        top: -35%;
+        left: 18%;
+        z-index: -100;
+
+        @include m.sp {
+            width: 80px;
+            height: 80px;
+            bottom: 18%;
+            right: 2%;
+        }
+    }
+
+    &-bottom {
+        position: absolute;
+        border: 3px solid rgba(62, 163, 153, 0.25);
+        border-radius: 62%;
+        width: 175px;
+        height: 175px;
+        bottom: -35%;
+        left: 35%;
+        z-index: -100;
+
+        @include m.sp {
+            width: 95px;
+            height: 95px;
+            bottom: 2%;
+            left: 6%;
+        }
+    }
+}
+
+.circle3 {
+    &-top {
+        position: absolute;
+        border: 3px solid rgba(62, 163, 153, 0.25);
+        border-radius: 62%;
+        width: 200px;
+        height: 200px;
+        top: -20%;
+        right: 0%;
+        z-index: -100;
+
+        @include m.sp {
+            width: 82px;
+            height: 82px;
+            top: -13%;
+            right: 2%;
+        }
+    }
+
+    &-bottom {
+        position: absolute;
+        border: 3px solid rgba(62, 163, 153, 0.25);
+        border-radius: 62%;
+        width: 173px;
+        height: 173px;
+        top: 58%;
+        left: 10%;
+        z-index: -100;
+
+        @include m.sp {
+            width: 105px;
+            height: 105px;
+            top: 46%;
+            left: 52%;
+        }
+    }
+}
+
+.circle4 {
+    &-top {
+        position: absolute;
+        border: 3px solid rgba(62, 163, 153, 0.25);
+        border-radius: 62%;
+        width: 150px;
+        height: 150px;
+        top: 0%;
+        right: 40%;
+        z-index: -100;
+
+        @include m.sp {
+            width: 70px;
+            height: 70px;
+            top: -52%;
+            left: 74%;
+        }
+    }
+
+    &-bottom {
+        position: absolute;
+        border: 3px solid rgba(62, 163, 153, 0.25);
+        border-radius: 62%;
+        width: 180px;
+        height: 180px;
+        bottom: -20%;
+        right: 11.5%;
+        z-index: -100;
+
+        @include m.sp {
+            width: 90px;
+            height: 90px;
+            top: 48%;
+            left: -3%;
+        }
+    }
+}
+
+.circle5 {
+    &-top {
+        position: absolute;
+        border: 3px solid rgba(62, 163, 153, 0.25);
+        border-radius: 62%;
+        width: 160px;
+        height: 160px;
+        bottom: -12%;
+        left: 14%;
+        z-index: -100;
+
+        @include m.sp {
+            width: 70px;
+            height: 69px;
+            top: -14%;
+            left: 14%;
+        }
+    }
+
+    &-bottom {
+        position: absolute;
+        border: 3px solid rgba(62, 163, 153, 0.25);
+        border-radius: 62%;
+        width: 120px;
+        height: 120px;
+        bottom: -20%;
+        left: 24%;
+        z-index: -100;
+
+        @include m.sp {
+            width: 90px;
+            height: 90px;
+            top: 73%;
+            left: 64%;
+        }
+    }
+}

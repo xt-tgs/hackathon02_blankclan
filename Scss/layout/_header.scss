@@ -1,0 +1,151 @@
+@use'../common/mixin' as m;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  /* ▼ グラデーション背景だけ透明度0.8 */
+  background: linear-gradient(100deg, rgba(225,247,187,0.7) 0%, rgba(25,196,207,0.7) 100%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  pointer-events: none;
+  /* 最初は上に隠す＋透明に */
+  transform: translateY(-100%);
+  /* 修正：スライド＋フェードのアニメーション */
+  transition:
+    transform 0.3s cubic-bezier(.4,0,.2,1),
+    opacity 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.header.header--visible {
+  transform: translateY(0);
+  pointer-events: auto; // クリック等も有効
+  }
+
+.bar {
+  position: relative;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 8px 32px; // 横にゆとり。上下調整も可
+  z-index: 10;
+  margin-left: 24px;
+  overflow: visible;
+  opacity: 1; // ← barは常に表示
+}
+
+.logo-set {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+.logo-text {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+//// // -------------------------------------------------------
+// // ハンバーガーメニュー
+// // -------------------------------------------------------
+.hamburger {
+  display: none;
+  position: relative;
+  width: 38px;
+  height: 38px;
+  margin-left: auto;
+  z-index: 2100;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 70%;
+    height: 4px;
+    margin: 6px auto;
+    background: #333;
+    border-radius: 3px;
+    transition: all 0.3s;
+  }
+
+  // ハンバーガー開閉時のアニメも任意で
+  &.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  &.active span:nth-child(2) {
+    opacity: 0;
+  }
+  &.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+}
+
+// スマホだけ表示
+@include m.sp {
+  .hamburger {
+    display: block;
+  }
+}
+
+// SP用メニュー
+.sp-menu {
+  display: none; // 初期非表示
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70vw;
+  max-width: 320px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 4px 0 16px rgba(0,0,0,0.16);
+  z-index: 2000;
+  padding: 48px 24px 24px;
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+  transform: translateX(-120%);
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: 24px;
+      a {
+        color: #333;
+        font-weight: bold;
+        font-size: 18px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &.sp-menu--visible {
+    display: block;
+    transform: translateX(0);
+  }
+}
+
+@include m.sp {
+  .sp-menu {
+    display: block;
+  }
+}

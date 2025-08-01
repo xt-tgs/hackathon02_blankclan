@@ -1,0 +1,17 @@
+// common
+@use'common/mixin' as m;
+@use'common/common';
+
+// layouts
+@use'layout/header';
+@use'layout/footer';
+
+// pages
+@use'pages/mainvisual';
+@use'pages/worries';
+@use'pages/friends';
+@use'pages/avatar';
+@use'pages/method';
+@use'pages/floorMap';
+@use'pages/loading';
+@use'pages/mainvisual__opening-video';
