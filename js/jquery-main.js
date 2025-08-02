@@ -75,8 +75,9 @@ $(function () {
     // -------------------------------------------------------
     // Page top
     // -------------------------------------------------------
-    const button = document.querySelector('.page-top');
+   const button = document.querySelector('.page-top');
 
+if (button) {
     button.addEventListener('click', () => {
         window.scroll({
             top: 0,
@@ -91,7 +92,7 @@ $(function () {
             button.classList.remove('is-active');
         }
     });
-
+}
     // -------------------------------------------------------
     // フェードUP
     // -------------------------------------------------------
@@ -318,4 +319,5 @@ $(function () {
             window.scrollTo(0, 0);
         });
     })();
+
 });
