@@ -304,6 +304,13 @@ h4 {
   border-radius: 100px 100px 0 0;
   z-index: 1000;
 }
+@media (max-width: 980px) {
+  .button {
+    width: 127px;
+    height: 63px;
+    right: 3px;
+  }
+}
 
 .button i {
   position: absolute;
@@ -1041,6 +1048,12 @@ h4 {
   opacity: 1;
 }
 
+@media (max-width: 980px) {
+  .text p {
+    font-size: 14px;
+  }
+}
+
 .adventure-banner {
   position: relative;
   background-color: #f7f8ec;
@@ -1662,7 +1675,7 @@ h4 {
 
 @media (max-width: 980px) {
   .slick-dots {
-    display: none;
+    visibility: hidden;
   }
 }
 
