@@ -1356,7 +1356,7 @@ h4 {
 }
 @media (max-width: 980px) {
   .even .friends-text {
-    top: 30%;
+    top: 25%;
     right: -29.5%;
     z-index: -50;
   }
@@ -1404,8 +1404,8 @@ h4 {
   white-space: nowrap;
 }
 @media (max-width: 980px) {
-  .text {
-    font-size: 14px;
+  .text-bg {
+    font-size: 18.5px;
   }
 }
 
