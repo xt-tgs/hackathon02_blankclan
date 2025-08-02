@@ -445,7 +445,7 @@
 
 .central-area .room-description {
     @include m.sp {
-        margin: 0 auto;
+        margin: 0 auto 36px;
     }
 
 }
@@ -537,7 +537,7 @@
         width: auto;
         max-height: 165px;
         @include m.sp {
-        max-height: 100px;
+        max-height: 155px;
         }
     }
 }
@@ -577,5 +577,6 @@
         }
     }
 }
+
 
 
