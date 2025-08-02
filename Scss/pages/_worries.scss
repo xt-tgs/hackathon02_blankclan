@@ -131,6 +131,12 @@
     opacity: 1; // 念のため
 }
 
+.text p{
+    @include m.sp {
+    font-size: 14px;
+    }
+}
+
 .adventure-banner {
     position: relative;
     background-color: #f7f8ec;
@@ -224,4 +230,5 @@
     height: 60px;
     width: auto;
 }
+
 
