@@ -158,7 +158,11 @@
 .floor {
     &-lower {
         position: relative;
-        margin-top: 80px;
+        margin: 80px 0 0;
+
+        @include m.sp {
+            margin: 0 0 50px;
+        }
 
         &-box {
             display: grid;
@@ -567,3 +571,4 @@
         }
     }
 }
+
