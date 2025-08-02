@@ -220,7 +220,7 @@
     transform: translate(-50%, -50%);
 
     @include m.sp {
-        top: 30%;
+        top: 25%;
         right: -29.5%;
         z-index: -50;
     }
@@ -265,10 +265,8 @@
         font-size: 24px;
         display: inline-block;
         white-space: nowrap;
-    }
-
     @include m.sp {
-        font-size: 14px;
+        font-size: 18.5px;
     }
 }
 
@@ -468,4 +466,5 @@
     }
 
 }
+
 
