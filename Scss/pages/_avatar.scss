@@ -53,7 +53,7 @@
 
 .slick-dots {
     @include m.sp {
-        display: none;
+        visibility: hidden;;
     }
 }
 
@@ -363,5 +363,6 @@
     }
 
 }
+
 
 
