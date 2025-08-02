@@ -160,8 +160,8 @@
         position: relative;
         margin: 80px 0 0;
 
-        @include m.sp {
-            margin: 0 0 50px;
+       @include m.sp {
+            margin: 100px 0 50px;
         }
 
         &-box {
@@ -577,6 +577,7 @@
         }
     }
 }
+
 
 
 
