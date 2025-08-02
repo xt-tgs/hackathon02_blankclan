@@ -276,7 +276,7 @@
         max-height: 370px;
 
         @include m.sp {
-            max-height: 253px;
+            max-height: 296px;
         }
     }
 }
@@ -396,6 +396,12 @@
         grid-column: 1/2;
         max-width: 96%;
     }
+
+    img {
+        @include m.sp {
+            max-width: 285px;
+        }
+    }
 }
 
 .central-area {
@@ -494,7 +500,7 @@
         width: auto;
         max-height: 280px;
         @include m.sp {
-            height: 150px;
+            height: 205px;
         }
     }
 }
@@ -571,4 +577,5 @@
         }
     }
 }
+
 
