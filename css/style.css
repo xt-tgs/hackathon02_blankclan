@@ -2191,6 +2191,11 @@ h4 {
   padding: 15px 35px 20px 0px;
   border-bottom: 1px dotted #000;
 }
+@media (max-width: 980px) {
+  .panel dd {
+    padding: 15px 7px 20px 0px;
+  }
+}
 .panel dd img {
   padding-left: 10px;
 }
