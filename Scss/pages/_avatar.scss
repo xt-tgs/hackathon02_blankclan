@@ -51,6 +51,12 @@
     display: block;
 }
 
+.slick-dots {
+    @include m.sp {
+        display: none;
+    }
+}
+
 .header_avatar {
     position: fixed;
     top: 0;
@@ -354,4 +360,5 @@
     @include m.sp {
         width: 250px;
     }
+
 }
