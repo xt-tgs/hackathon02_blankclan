@@ -173,7 +173,7 @@
 
             @include m.sp {
                 grid-template-columns: 1fr;
-                grid-template-rows: 4fr repeat(12, 1fr);
+                grid-template-rows: 3fr repeat(12, 1fr);
                 max-width: 800px;
                 margin: 0 auto 50px;
             }
@@ -198,18 +198,23 @@
 }
 
 
+
 .beginner-room {
     position: absolute;
-    top: 26%;
-    left: 27%;
+    top: 1%;
+    left: 1%;
     z-index: 10;
     width: 292px;
+    height: 292px;
     box-shadow: inset 0px 0px 8px 0px rgba(78, 78, 78, 0.3);
 
     @include m.sp {
-        top: 3.3%;
-        left: 3%;
-        width: 88%;
+        display: flex;
+        top: 1.3%;
+        left: 1%;
+        width: 93%;
+        height: 210px;
+        gap: 8px;
     }
 
     img {
@@ -220,17 +225,20 @@
 
 .study-area {
     position: absolute;
-    top: 26%;
+    top: 1%;
     left: 49.5%;
     z-index: 10;
     width: 292px;
-    height: 255px;
+    height: 280px;
     box-shadow: inset 0px 0px 8px 0px rgba(78, 78, 78, 0.3);
 
     @include m.sp {
-        top: 9%;
+        display: flex;
+        top: 26%;
         left: 3.5%;
         width: 88%;
+        height: 163px;
+        gap: 8px;
     }
 
     img {
@@ -457,15 +465,30 @@
     height: 281px;
     border-left: 4px dashed #2ed4c4;
     border-right: none;
+
+    @include m.sp {
+        top: 198px;
+        left: 6px;
+        width: 34px;
+        height: 365px;
+        border-top: 4px dashed #2ed4c4;
+    }
 }
 
 .floor-right {
-    top: 228px;
+    top: 270px;
     left: 410px;
     width: 30px;
-    height: 316px;
+    height: 275px;
     border-right: 4px dashed #2ed4c4;
     border-left: none;
+
+    @include m.sp {
+        top: 388px;
+        left: 232px;
+        width: 30px;
+        height: 174px;
+    }
 }
 
 .sakurabo {
@@ -577,6 +600,7 @@
         }
     }
 }
+
 
 
 
