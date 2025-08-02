@@ -150,11 +150,19 @@
         font-size: 2.8rem;
         color: white;
         z-index: 2;
+        
+        @include m.sp {
+            padding: 10px 0;
+        }
 
         .line {
             font-size: 7rem;
             color: white;
             margin: 0 20px;
+
+            @include m.sp {
+                font-size: 5rem;
+            }
         }
 
         .text {
@@ -216,3 +224,4 @@
     height: 60px;
     width: auto;
 }
+
