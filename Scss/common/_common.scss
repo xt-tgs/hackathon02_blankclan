@@ -316,6 +316,12 @@ h4 {
     font-weight: bold;
     border-radius: 100px 100px 0 0;
     z-index: 1000;
+
+    @include m.sp {
+        width: 127px;
+        height: 63px;
+        right: 3px;
+    }
 }
 
 .button i {
@@ -349,4 +355,5 @@ h4 {
 #method,
 #floormap {
     scroll-margin-top: 80px;
+
 }
