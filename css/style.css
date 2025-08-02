@@ -1318,7 +1318,7 @@ h4 {
 @media (max-width: 980px) {
   .friends-text-even {
     font-size: 12px;
-    top: 86%;
+    top: 80%;
   }
 }
 .friends-text-odd {
@@ -2823,7 +2823,7 @@ h4 {
 }
 @media (max-width: 980px) {
   .lower-right {
-    max-height: 253px;
+    max-height: 296px;
   }
 }
 
@@ -2875,7 +2875,7 @@ h4 {
 @media (max-width: 980px) {
   .few-count img {
     width: auto;
-    height: 58px;
+    height: 69px;
     margin-top: 30px;
   }
 }
@@ -2941,6 +2941,11 @@ h4 {
     grid-row: 7/8;
     grid-column: 1/2;
     max-width: 96%;
+  }
+}
+@media (max-width: 980px) {
+  .project-room img {
+    max-width: 285px;
   }
 }
 
@@ -3041,7 +3046,7 @@ h4 {
 }
 @media (max-width: 980px) {
   .cafe-space img {
-    height: 150px;
+    height: 205px;
   }
 }
 
