@@ -49,6 +49,9 @@
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  @include m.sp {
+  padding-right: 10px;
+  }
 }
 
 .logo-icon {
@@ -149,3 +152,4 @@
     display: block;
   }
 }
+
