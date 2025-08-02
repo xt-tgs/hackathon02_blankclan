@@ -212,7 +212,10 @@
         text-align: right;
         padding: 15px 35px 20px 0px;
         border-bottom: 1px dotted #000;
-
+        
+@include m.sp {
+            padding: 15px 7px 20px 0px;
+        }
 
         img {
             padding-left: 10px;
@@ -612,3 +615,4 @@
     display: flex;
 
 }
+
