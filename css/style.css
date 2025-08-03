@@ -488,6 +488,9 @@ h4 {
   font-family: "DotGothic16", sans-serif;
   color: var(--main);
 }
+.sp-menu ul li a:hover {
+  color: var(--red);
+}
 .sp-menu.sp-menu--visible {
   display: block;
   transform: translateX(0);
