@@ -355,12 +355,18 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  overflow: hidden;
+  overflow: visible;
   pointer-events: none;
   /* 最初は上に隠す＋透明に */
   transform: translateY(-100%);
   /* 修正：スライド＋フェードのアニメーション */
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (max-width: 980px) {
+  .header {
+    justify-content: space-between;
+    padding-right: 10px;
+  }
 }
 
 .header.header--visible {
@@ -386,6 +392,11 @@ h4 {
   margin-left: 24px;
   overflow: visible;
   opacity: 1;
+}
+@media (max-width: 980px) {
+  .bar {
+    padding: 8px 15px;
+  }
 }
 
 .logo-set {
@@ -471,10 +482,11 @@ h4 {
   margin-bottom: 24px;
 }
 .sp-menu ul li a {
-  color: #333;
   font-weight: bold;
   font-size: 18px;
   text-decoration: none;
+  font-family: "DotGothic16", sans-serif;
+  color: var(--main);
 }
 .sp-menu.sp-menu--visible {
   display: block;
@@ -486,6 +498,10 @@ h4 {
     display: block;
   }
 }
+.sp-menu .lower-bg {
+  right: 39px;
+}
+
 .footer {
   background: #d9f0f0;
   text-align: center;
