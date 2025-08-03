@@ -34,6 +34,22 @@
                 <img src="img/text_MataLeaf.png" alt="MetaLeafテキストロゴ" class="logo-text_method" />
             </a>
         </div>
+        <button class="hamburger" aria-label="メニューを開く" aria-controls="sp-menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <!-- スマホ用メニュー -->
+        <nav class="sp-menu" id="sp-menu" aria-hidden="true">
+            <ul>
+                <li><a href="index.html#question">MetaLeafについて</a></li>
+                <li><a href="index.html#avatar">アバター</a></li>
+                <li><a href="index.html#method">操作方法</a></li>
+                <li><a href="index.html#floormap">フロアマップ</a></li>
+                <!-- 下層用なら、hrefをそのページのidやリンクに変えてOK -->
+            </ul>
+            <img class="lower-bg" src="/img/logo.png" alt="背景ロゴ">
+        </nav>
     </header>
 
     <main>
@@ -201,6 +217,7 @@
 </body>
 
 </html>
+
 
 
 
