@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  overflow: hidden;
+  overflow: visible;
   pointer-events: none;
   /* 最初は上に隠す＋透明に */
   transform: translateY(-100%);
@@ -152,4 +152,5 @@
     display: block;
   }
 }
+
 
