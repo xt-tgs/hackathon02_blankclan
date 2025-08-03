@@ -2741,10 +2741,11 @@ h4 {
   .floor-map .floor .floor-box h3 {
     padding: 0;
   }
-  .floor-map .floor .floor-box p {
-    padding: 0 0 5px 20px;
-  }
 }
+.floor-box p {
+  padding: 0 0 5px 20px;
+}
+
 /* floorMap 下層ページ
 ------------------------------------------ */
 .floor-lower {
