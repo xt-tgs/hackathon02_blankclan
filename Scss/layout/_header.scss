@@ -133,10 +133,11 @@
     li {
       margin-bottom: 24px;
       a {
-        color: #333;
         font-weight: bold;
         font-size: 18px;
         text-decoration: none;
+        font-family: "DotGothic16", sans-serif;
+       color: var(--main);
       }
     }
   }
@@ -152,5 +153,6 @@
     display: block;
   }
 }
+
 
 
