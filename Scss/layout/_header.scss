@@ -138,6 +138,10 @@
         text-decoration: none;
         font-family: "DotGothic16", sans-serif;
        color: var(--main);
+
+        &:hover{
+          color: var(--red);
+        }
       }
     }
   }
@@ -157,5 +161,6 @@
 .sp-menu .lower-bg{
     right: 39px;
 }
+
 
 
