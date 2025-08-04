@@ -410,6 +410,7 @@
     }
 
     img {
+        width: 260px;
         @include m.sp {
             max-width: 285px;
         }
@@ -604,6 +605,7 @@
         }
     }
 }
+
 
 
 
